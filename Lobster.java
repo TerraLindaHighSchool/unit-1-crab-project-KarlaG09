@@ -16,7 +16,7 @@ public class Lobster extends Actor
 
     private void turnAtEdge()
     {
-       if (isAtEdge());
+       if (isAtEdge())
         
         turn(50); 
     }

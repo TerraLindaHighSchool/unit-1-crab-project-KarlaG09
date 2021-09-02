@@ -1,14 +1,15 @@
 import greenfoot.*;
 
  /**
-    * The class controls the Crab object
+    * The class defines a crab. Crabs live on the beach.
     * @author: Karla
     * @version: 8/26/21
     */
 public class Crab extends Actor
 
 {  
-    private int numOfWorms=0;
+    private int numOfWorms= 8;
+    
    public void act()  
    {
        move(3);
@@ -19,9 +20,9 @@ public class Crab extends Actor
 
     private void turnAtEdge()
     {
-       if (isAtEdge());
-      {    
-        turn(50); 
+       if (isAtEdge())
+      {   
+          turn(50); 
       }
     }
     // Turns the Crab at the edge
@@ -33,29 +34,26 @@ public class Crab extends Actor
      {
         turn(4);
      }
+     
      if(Greenfoot.isKeyDown("left"))
      {
          turn(-4);
      }
-     if(Greenfoot.isKeyDown("up"))
-     {
-            Greenfoot.delay(60);
-     }
+     
      }
 
-    // Checks for collisions with other objects
    private void onCollision () 
    {
        
     if(isTouching(Worm.class))
      {
-    
         removeTouching(Worm.class);
         Greenfoot.playSound("slurp.wav");
-        numOfWorms --;
+        numOfWorms--;
+        System.out.println("Number of worms" + numOfWorms);
     
-         // *** Winning the game *******************
-         if (numOfWorms ==0)
+         //Winning The Game
+         if (numOfWorms == 0)
          {
              Greenfoot.setWorld(new WinSplash());
              Greenfoot.playSound("fanfare.wav");

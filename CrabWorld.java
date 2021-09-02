@@ -18,38 +18,28 @@ public class CrabWorld extends World
      */
     private void prepare()
     {
-
-        Crab crab = new Crab();
-        addObject(crab,256,200);
+       Crab crab = new Crab();
+        addObject(crab,142,148);
         Worm worm = new Worm();
-        addObject(worm,358,235);
+        addObject(worm,553,192);
+        worm.setLocation(414,190);
+        crab.setLocation(133,146);
         Worm worm2 = new Worm();
-        addObject(worm2,66,214);
+        addObject(worm2,278,332);
         Worm worm3 = new Worm();
-        addObject(worm3,120,405);
+        addObject(worm3,424,369);
         Worm worm4 = new Worm();
-        addObject(worm4,302,388);
-        worm4.setLocation(307,444);
+        addObject(worm4,255,114);
         Worm worm5 = new Worm();
-        addObject(worm5,482,423);
+        addObject(worm5,80,418);
         Worm worm6 = new Worm();
-        addObject(worm6,483,67);
+        addObject(worm6,464,65);
         Worm worm7 = new Worm();
-        addObject(worm7,352,50);
+        addObject(worm7,488,524);
         Worm worm8 = new Worm();
-        addObject(worm8,124,29);
-        worm8.setLocation(120,123);
-        worm8.setLocation(124,107);
-        worm8.setLocation(106,47);
-        worm8.setLocation(114,35);
-        Lobster lobster = new Lobster();
-        addObject(lobster,461,203);
-        lobster.setLocation(364,177);
-        lobster.setLocation(353,182);
-        lobster.setLocation(352,151);
-        lobster.setLocation(65,156);
-        lobster.setLocation(383,196);
-        lobster.setLocation(369,194);
-        lobster.setLocation(367,165);
+        addObject(worm8,74,239);
+        Lobster Lobster = new Lobster();
+        addObject(Lobster,360,264);
+       
     }
 }
